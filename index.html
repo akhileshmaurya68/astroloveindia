@@ -17,7 +17,15 @@
 html{scroll-behavior:smooth}
 body{font-family:'Visual Serif',Georgia,'Times New Roman',serif;color:var(--ink);background:var(--cream);line-height:1.75;font-size:17px}
 a{color:inherit}
-header{position:sticky;top:0;z-index:9;background:var(--deep);color:#fff;display:flex;justify-content:space-between;align-items:center;padding:12px 5%}
+.top{position:sticky;top:0;z-index:9}
+.ticker{background:var(--gold);color:var(--deep);overflow:hidden;white-space:nowrap;font-size:.88rem;border-top:1px solid rgba(36,16,72,.25)}
+.track{display:flex;width:max-content;animation:tick 32s linear infinite}
+.ticker:hover .track{animation-play-state:paused}
+.track span{padding:7px 48px}
+.track a{font-weight:bold;text-decoration:underline}
+@keyframes tick{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.track{animation:none}}
+header{position:relative;z-index:2;background:var(--deep);color:#fff;display:flex;justify-content:space-between;align-items:center;padding:12px 5%}
 .logo{color:var(--gold);font-size:1.3rem;text-decoration:none}
 nav{display:flex;gap:18px;flex-wrap:wrap}
 nav a{text-decoration:none;font-size:.9rem;opacity:.9}nav a:hover{color:var(--gold)}
@@ -63,11 +71,19 @@ footer{background:var(--deep);color:#d9cdf0;text-align:center;padding:34px 6%;fo
 </style>
 </head>
 <body>
+<div class="top">
 <header>
 <a class="logo" href="#top"><i class="fa-solid fa-om"></i> astroloveindia.com</a>
 <button id="menu" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
 <nav id="nav"><a href="#basics">Basics</a><a href="#kundali">Kundali</a><a href="#dasha">Dasha</a><a href="#saturn">Saturn</a><a href="#manglik">Manglik</a><a href="#rahu">Rahu-Ketu</a><a href="#habits">Habits</a><a href="#remedies">Remedies</a><a href="#wealth">Wealth</a><a href="#career">Career</a><a href="#love">Marriage</a><a href="#abroad">Abroad</a><a href="#invest">Invest</a></nav>
 </header>
+<div class="ticker" role="marquee" aria-label="Domain for sale notice"><div class="track">
+<span><i class="fa-solid fa-bullhorn"></i> This domain and website is for sale. Contact : <a href="https://wa.me/919967915689" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> +91-9967915689</a> on whatsapp only or send email to : <a href="mailto:akhileshmaurya68@gmail.com">akhileshmaurya68@gmail.com</a></span>
+<span><i class="fa-solid fa-bullhorn"></i> This domain and website is for sale. Contact : <a href="https://wa.me/919967915689" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> +91-9967915689</a> on whatsapp only or send email to : <a href="mailto:akhileshmaurya68@gmail.com">akhileshmaurya68@gmail.com</a></span>
+<span><i class="fa-solid fa-bullhorn"></i> This domain and website is for sale. Contact : <a href="https://wa.me/919967915689" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> +91-9967915689</a> on whatsapp only or send email to : <a href="mailto:akhileshmaurya68@gmail.com">akhileshmaurya68@gmail.com</a></span>
+<span><i class="fa-solid fa-bullhorn"></i> This domain and website is for sale. Contact : <a href="https://wa.me/919967915689" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> +91-9967915689</a> on whatsapp only or send email to : <a href="mailto:akhileshmaurya68@gmail.com">akhileshmaurya68@gmail.com</a></span>
+</div></div>
+</div>
 
 <div class="hero" id="top">
 <div class="om">ॐ</div>
